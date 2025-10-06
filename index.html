@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeMaster - Professional Typing Test</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">TypeMaster</h1>
+            <p class="subtitle">Test and improve your typing speed</p>
+        </header>
+        
+        <main>
+            <!-- Language Selector -->
+            <div class="language-selector">
+                <button id="english-btn" class="lang-btn active">English</button>
+                <button id="amharic-btn" class="lang-btn">Amharic</button>
+            </div>
+            
+            <!-- Stats Display - Only Time -->
+            <div class="card">
+                <div class="stats-container">
+                    <div class="stat">
+                        <div class="stat-label">Time</div>
+                        <div id="timer" class="stat-value">0.0s</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sentence Display -->
+            <div class="card">
+                <div class="sentence-container">
+                    <p id="sentence" class="sentence-text"></p>
+                </div>
+                
+                <div class="input-container">
+                    <textarea 
+                        id="typing-input" 
+                        class="typing-input" 
+                        placeholder="Start typing here..."
+                        rows="3"
+                    ></textarea>
+                </div>
+                
+                <div class="button-container">
+                    <button id="view-result-btn" class="view-result-btn">
+                        View Result
+                    </button>
+                    <button id="restart-btn" class="restart-btn">
+                        Restart Test
+                    </button>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Developer Credit -->
+        <footer class="footer">
+            <p>Created by Samuel Abera</p>
+        </footer>
+    </div>
+    
+    <!-- Results Modal -->
+    <div id="results-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="performance-level">Your Result</h2>
+                <button id="close-modal" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="performance-message" class="performance-message"></div>
+                <div class="results-stats">
+                    <div class="result-stat">
+                        <span class="result-label">Time</span>
+                        <span id="result-time" class="result-value">0.0s</span>
+                    </div>
+                    <div class="result-stat">
+                        <span class="result-label">Correct Letters</span>
+                        <span id="result-letters" class="result-value">0</span>
+                    </div>
+                    <div class="result-stat">
+                        <span class="result-label">Total Letters</span>
+                        <span id="result-total" class="result-value">0</span>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button id="new-test-btn" class="primary-btn">New Test</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
